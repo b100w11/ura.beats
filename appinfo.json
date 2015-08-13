@@ -1,0 +1,41 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "CVA",
+    "longName": "Ura.beats",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/ura.beats28.png",
+                "menuIcon": true,
+                "name": "icon28",
+                "type": "png"
+            },
+            {
+                "characterRegex": "[0-9 abcdefghijlmnoprstuwyABCDEFGHIJLMNOPRSTUWY]",
+                "file": "fonts/LCD-BOLD.ttf",
+                "name": "FONT_LCD_25",
+                "type": "font"
+            },
+            {
+                "characterRegex": "[0-9:.@]",
+                "file": "fonts/LCD-BOLD.ttf",
+                "name": "FONT_LCD_60",
+                "type": "font"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "Ura",
+    "targetPlatforms": [
+        "basalt"
+    ],
+    "uuid": "6f328a23-926a-42ba-adb0-ff2cbe6206e4",
+    "versionLabel": "0.8",
+    "watchapp": {
+        "watchface": true
+    }
+}
