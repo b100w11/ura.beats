@@ -9,6 +9,11 @@
     "resources": {
         "media": [
             {
+                "file": "images/screenshot.png",
+                "name": "screen",
+                "type": "png"
+            },
+            {
                 "file": "images/ura.beats28.png",
                 "menuIcon": true,
                 "name": "icon28",
