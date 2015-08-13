@@ -10,14 +10,6 @@ static TextLayer *s_bits_layer;
 
 #define BUFFER_SIZE 86
 
-  /*
-static struct CommonWordsData {
-  TextLayer *label;
-  Window *window;
-  char buffer[BUFFER_SIZE];
-} s_data;
-*/
-
 static char bits_buffer[BUFFER_SIZE] = "999"; 
 
 static void update_time() {
@@ -42,8 +34,6 @@ static void update_time() {
 
     strftime(date_buffer, sizeof(date_buffer), "%a %d %b", tick_time);
   
-    //internet_time(tick_time->tm_hour, tick_time->tm_min, bits_buffer, sizeof(bits_buffer));
-    //internet_time(tick_time->tm_hour, tick_time->tm_min, s_data.buffer, BUFFER_SIZE);
   internet_time(tick_time->tm_hour, tick_time->tm_min, bits_buffer, BUFFER_SIZE);
   
     // Display this time elements on the Layers
@@ -93,8 +83,7 @@ static void main_window_load(Window *window) {
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_time_layer));
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_date_layer));
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_bits_layer));
-  //layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_data.label));
-    
+      
   // Make sure the time is displayed from the start
   update_time();
 }
@@ -108,7 +97,6 @@ static void main_window_unload(Window *window) {
   text_layer_destroy(s_time_layer);
   text_layer_destroy(s_date_layer);
   text_layer_destroy(s_bits_layer); 
-  //text_layer_destroy(s_data.label);
 }
 
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
